@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="screen-container">
+        <div class="screen active" id="startScreen">
+            <h1>QUIZ TIME!</h1>
+            <p>Test your knowledge with these fun questions</p>
+            <button id="startButton">Start quiz</button>
+        </div>
+
+        <div class="screen" id="quizScreen">
+            <h3 class="question-heading">{question}</h3>
+            <div class="question-info">    <!-- This div make easy to make Flexbox ; for this info text style we are using spacebetween so div required -->
+                <p>Question <span id="currentQuestion">{question-number}</span> of <span id="totalQuestions">{total-noof-question}</span></p>
+                <p>Score: <span id="score">{current-score}</span></p>
+            </div>
+            <div class="options-container">
+                <!-- dynamic options -->
+            </div>
+            <div class="progress-bar">
+                <!-- dynamic progress bar updated through number of questions completed -->
+                 <div id="progress" class="progress"></div>
+            </div>
+        </div>
+        <div class="screen" id="resultScreen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p >You scored <span id ="correct-answers">{correct-answers} </span> out of <span id ="totalQuestionsResult">{total-noof-question}</span></p>
+                <p id="result-message">Good job!</p>
+            </div>
+            <button id="restart-quiz">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+</html>
